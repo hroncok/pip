@@ -56,7 +56,7 @@ def _should_use_sysconfig() -> bool:
     """
     if hasattr(sysconfig, "_PIP_USE_SYSCONFIG"):
         return bool(sysconfig._PIP_USE_SYSCONFIG)  # type: ignore [attr-defined]
-    return sys.version_info >= (3, 10)
+    return sys.version_info >= (3, 9)
 
 
 # This is a function for testability, but should be constant during any one run.
